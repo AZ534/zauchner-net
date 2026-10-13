@@ -12,16 +12,15 @@
 
     body {
       font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      color: #1a1a1a;
-      background: #ffffff;
+      color: #ffffff;
+      background: #6e2535;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
 
     main {
-      flex: 1;
-      padding: 80px 48px 60px;
+      padding: 80px 48px 32px;
       max-width: 700px;
     }
 
@@ -33,52 +32,61 @@
     }
 
     .area {
-      font-size: 1rem;
-      color: #555;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.75);
       margin-bottom: 32px;
     }
 
     .tags {
       margin-bottom: 40px;
       font-size: 0.9rem;
-      color: #555;
+      color: rgba(255,255,255,0.75);
     }
 
     .links {
       display: flex;
-      flex-direction: column;
-      gap: 16px;
+      flex-direction: row;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .links .sep {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.9rem;
     }
 
     .links a {
-      color: #1a1a1a;
+      color: rgba(255,255,255,0.75);
       text-decoration: none;
-      font-size: 0.95rem;
-      transition: color 0.15s;
-    }
-
-    .links-wrapper {
-      border-bottom: 1px solid #b83c1e;
-      padding-bottom: 40px;
-      margin-bottom: 0;
+      font-size: 0.9rem;
+      transition: opacity 0.15s;
     }
 
     .links a:hover {
-      color: #b83c1e;
+      opacity: 0.7;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.3);
+      margin: 0;
     }
 
     footer {
-      border-top: 1px solid #e8e8e8;
-      padding: 40px 48px;
+      flex: 1;
+      border-top: none;
+      padding: 0 48px 40px;
+      display: flex;
+      align-items: flex-end;
       font-size: 0.8rem;
-      color: #888;
+      color: rgba(255,255,255,0.5);
       line-height: 1.8;
     }
 
     footer details summary {
       font-size: 0.75rem;
       font-weight: 400;
-      color: #aaa;
+      color: rgba(255,255,255,0.5);
       cursor: pointer;
       list-style: none;
       display: inline-block;
@@ -87,13 +95,7 @@
     footer details summary::-webkit-details-marker { display: none; }
 
     footer details summary::after {
-      content: " ↓";
-      font-weight: 400;
-      color: #aaa;
-    }
-
-    footer details[open] summary::after {
-      content: " ↑";
+      content: "";
     }
 
     footer details .impressum-inhalt {
@@ -101,9 +103,8 @@
     }
 
     footer a {
-      color: #888;
+      color: rgba(255,255,255,0.5);
       text-decoration: none;
-      border-bottom: 1px solid #ddd;
     }
 
     @media (max-width: 600px) {
@@ -119,17 +120,18 @@
     <h1>Amira Zauchner</h1>
     <p class="area">Sustainable Supply Chain &amp; ESG Management</p>
     <p class="tags">Consulting | Sparring | Coaching | Keynote | Training | Moderation</p>
-    <div class="links-wrapper">
     <div class="links">
       <a href="https://www.linkedin.com/in/amira-zauchner" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="icon-link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor" style="display:block;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display:block;">
           <path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765C14.396 7.179 20 6.988 20 12.247V19z"/>
         </svg>
       </a>
-      <a href="mailto:amira@zauchner.net">amira@zauchner.net</a>
-    </div>
+      <span class="sep">|</span>
+      <a href="mailto:amira@zauchner.net">Email: amira@zauchner.net</a>
     </div>
   </main>
+
+  <hr class="divider">
 
   <footer>
     <details>
